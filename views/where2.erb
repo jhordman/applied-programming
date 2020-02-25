@@ -24,13 +24,20 @@
 
     <div class="container mt-5">
       <h1>Where 2?</h1>
+      <h2><%= @lat %>, <%= @long %></h2>
       <iframe
         width="600"
         height="450"
         frameborder="0" style="border:0"
         src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCtovsQvkIUWlNqtYwXY87gEd4ZSmJEhMw
-          &q=42.0574063,-87.6722787&zoom=6" allowfullscreen>
+          &q=<%= @lat %>,<%= @long %>&zoom=6" allowfullscreen>
       </iframe>
+    </div>
+
+    
+
+    <div class="container mt-5">
+        <a href="/" class="btn btn-success">Do It Again</a>
     </div>
 
     <!-- Optional JavaScript -->

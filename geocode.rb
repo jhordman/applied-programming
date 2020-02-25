@@ -7,3 +7,9 @@ before { puts "Parameters: #{params}" }
 get "/" do
   view "geocode"
 end
+
+get "/map" do
+  @location = params["location"]
+  location = Geocoder.search("Paris")
+  view "map" 
+end
